@@ -1,0 +1,8 @@
+{
+  "type": "https://httpstatuses.com/400",
+  "status": 400,
+  "title": "Bad Request",
+  "detail": "A validation error occured",
+  "invalid_field": "first_name",
+  "validation_error": "must be set"
+}

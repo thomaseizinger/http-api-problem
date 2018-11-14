@@ -1,0 +1,6 @@
+{
+  "type": "https://httpstatuses.com/500",
+  "status": 500,
+  "title": "Internal Server Error",
+  "detail": "Unable to connect to the database"
+}

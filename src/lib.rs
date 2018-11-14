@@ -150,10 +150,10 @@ extern crate hyper;
 #[cfg(feature = "with_rocket")]
 extern crate rocket;
 
-use std::collections::HashMap;
 use std::fmt;
 
 use serde::{de::DeserializeOwned, Deserialize, Deserializer, Serialize, Serializer};
+use std::collections::BTreeMap;
 
 /// The recommended media type when serialized to JSON
 pub static PROBLEM_JSON_MEDIA_TYPE: &'static str = "application/problem+json";
@@ -206,7 +206,7 @@ pub struct HttpApiProblem {
 
     /// Additional fields that must be JSON values
     #[serde(flatten)]
-    additional_fields: HashMap<String, serde_json::Value>,
+    additional_fields: BTreeMap<String, serde_json::Value>,
 }
 
 impl HttpApiProblem {
