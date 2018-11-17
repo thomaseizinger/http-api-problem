@@ -1,2 +1,11 @@
 language: rust
-rust: stable
+matrix:
+  include:
+  - rust: stable
+    env: FEATURES="with_iron with_hyper"
+  - rust: nightly
+    env: FEATURES="with_iron with_hyper with_rocket"
+install: true
+script:
+  - cargo build --features $FEATURES --verbose
+  - cargo test --features $FEATURES --verbose
